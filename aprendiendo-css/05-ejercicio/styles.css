@@ -1,0 +1,204 @@
+/*
+Ejercicio completo  con HTML y CSS
+    (hecho)1.Crear un documento HTML y vincularlo con CSS 
+    (hecho)2. Crear una estructura HTML que cuente con CONTENEDOR GENERAL
+,CABECERA,BARRA LATERAL,SECCION DE CONTENIDO PRINCIPAL,
+ELEMENTOS DENTRO DEL CONTENEDOR PRINCIPAL, Y FOOTER.
+    (Hecho)3.Todo el contenido debe de estar en el contenedor general
+y su ancho sera de 1200px
+   (HECHO) 4. header debe ocupar el 100% del ancho y tener un texto grande
+centrado
+    (HECHO)5. MENU debe tener los elementos uno al lado de otro 
+    (HECHO)6. El contendio principal debe tener un ancho de 70%
+    (HECHO)7.El contenido dentro del contenedor principal debe debe de ser una 
+cuadricula con 4 lienas de 2 cajas
+    (HECHO)8.la barra lateral debe tener un ancho del 30%
+    9.El foorer debe tener un ancho 100% del div que contiene  y estar abajo
+del todo 
+*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#principal{
+    /*tamaño de caja contenedora*/
+    width: 1200px;
+    /*centrar enmedio*/
+    margin: 0px auto;
+    /*separar de ariba*/
+    margin-top: 25px;
+    border: 1px solid #cccccc;
+}
+
+#header{
+    width: 100%;
+    /*hacer mas grande la caja hacia abajo*/
+    height: 100px;
+    background:rgb(24, 24, 223) ;
+    color:white;
+    /*centrar texto*/
+    text-align: center;
+    /*centrar texto*/
+    line-height: 90px;
+
+}
+
+/*quitar el float*/
+.clearfix{
+    float: none;
+    clear: both;
+}
+
+#menu{
+    background-color: #cccccc;
+}
+
+#menu ul li{
+    /*poner alado el menu*/
+    /*display: inline-block;*/
+    /*elemento independiente*/
+    display: block;
+    float: left;
+    
+    /*bordes del menu*/
+    border-right: 1px solid rgb(180, 180, 180);
+}
+
+/*menu didactico*/
+#menu ul li a{
+    display:block ;
+    padding: 15px;    
+    color: #444;
+}
+
+/*hacer que los paneles del menu cabien de color al selecionar*/
+#menu ul li:hover {
+   background:rgb(31, 31, 110);
+   cursor: pointer;
+}
+#menu ul li:hover a{
+    
+    color:white;
+}
+
+#contenido{
+    float: left;
+    width: 69%;
+    /*border: 1px solid green;*/
+}
+
+#lateral{
+    float: left;
+    width: 30%;
+    border: 1px solid red;
+    /*minimo en la caja*/
+    min-height: 500px;
+    /*maximo permitido en la caja*/
+    max-height: 650px;
+    text-align: center;
+    /*texto que salga de la caja es eliminado*/
+    /*overflow: hidden;*/
+    /*que el con tenido tenga su propia barra de navegacion*/
+    /*overflow: scroll;*/
+    /*solo barra de navegacion de alado el eje y*/
+    overflow-y: scroll;
+    /*solo sea visible o pordefecto*/
+    /*overflow: hidden;*/
+
+}
+
+#contenido > h1 {
+    text-align: center;
+    border-bottom: 1px solid #cccccc;
+    padding: 15px;
+    color: #444;
+    /*sombreado en texto*/
+    text-shadow: 1px 1px 2px gray; 
+}
+
+#contenido .caja{
+    width: 40%;
+    height: 250px;
+    background-color:#cccccc;
+    border:1px solid gray;
+    color: white;
+    float: left;
+    /*margen de las cajas*/
+    margin: 20px;
+    /*margen ala derecha*/
+    margin-left: 40px;
+    text-align: center;
+    line-height: 200px;
+    color: #444444;
+    text-transform: uppercase;
+    /*sombra de una caja*/
+    box-shadow: 5px 5px 10px gray;
+    /*bordes redondeados*/
+    border-radius: 50px 10px 4px 61px;
+    /*circulos en las cajas*/
+    /*border-radius: 999px;*/
+}
+
+.sombra-interior{
+    box-shadow: 5px 5px 10px gray inset !important;
+}
+
+footer{
+    width: 1160px;
+    /*altura de la caja contenedora*/
+    height: 55px;
+    /*altura del texto*/
+    line-height: 55px;
+    background: #eeeeee;
+    text-align: center;
+    padding: 20px;
+    color: #444;
+    border-top: 1px solid #cccccc;
+}
+
+
+.libre{
+    /*posisionar la caja donde quieras (absolute)*/
+    position: absolute;
+    top: 0px;
+    left: 50%;
+
+    border: 1px solid black;
+    background-color: red;
+    color: white;
+    width: 50px;
+    height: 50px;
+    font-size: 13px;
+}
+
+.libre1{
+    /*decidir que caja esta por en sima de otra*/  
+    z-index: 2;
+}
+.libre2{
+    background-color: green;
+    top: 0px;
+    left: 48%;
+    /*decidir que caja esta por en sima de otra*/
+    z-index: 1;
+}
+
+.fija{
+    /*lacaja semuebe con la barra lateral del buscador 
+    la caja se muebe con el scrool*/
+    position: fixed;
+    top: 50%;
+    left: 0px;
+
+    border: 1px solid black;
+    background-color: blue;
+    color: white;
+    width: 50px;
+    height: 50px;
+    font-size: 13px;
+
+}
