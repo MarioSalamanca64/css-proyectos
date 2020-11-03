@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <!--importante para el responsive-->
+    <meta name="viewport" content="width=divece-width, user-scalable=no" />
+    <title>Codigo en Bootstrap con Mario salamanca</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+    
+    
+    <!---caja principal de 500px-->
+    <div class="container" style="height: 500px">
+        <h1>Herramientas disponibles en bootstrap</h1>
+        <hr>
+        <!--width o anchura w-25 anchura de 25% heith altura h-25 25%  
+         border redondeado rounded  ariba top abajo bottom rait left   circulo circle
+        se pude aplicar tanbien el float float-sm-none para no mostrar 
+        fondo backgraund bg-color
+        color de letras text-color 
+        margen m-num es del 1 al 5 o auto margen ariba mt- abajo mb- izquierada ml- derecha mr- 
+        margen interior pading p-numero en margen o padin ----negativo seria p-n2 -->
+        <div class="p-2 m-2 text-white bg-primary float-left float-sm-none float-md-left caja w-25 h-25 border border-primary rounded">
+            Esto es una caja
+        </div>
+
+        <div class="p-2 m-2 text-white bg-danger float-left caja w-25 h-25 border border-success rounded">
+            Esto es una caja
+        </div>
+
+        <div class="p-2 m-2 text-info bg-warning float-left caja w-25 h-25 border border-dark rounded">
+            Esto es una caja
+        </div>
+        <div class="clearfix"></div>
+        <!--centrar caja mx-auto-->
+        <!--sombra alas cajas shadow-sm lg shadow por defecto-->
+        <!--ocultar caja con invisible ver caja visible--->
+        <div class="visible shadow-lg mx-auto p-2 m-2 text-light bg-success caja w-25 h-25 border border-dark rounded">
+            Esto es una caja
+        </div>
+
+        <!--un clear fix para bajar la informacion y no este flotada-->
+        
+        <div class="clearfix"></div>
+        <hr>
+        <h2>Este es el fin de la caja</h2>
+        <hr>
+        <!--tama;o de la letra diplay-1
+        texto en negritas font-wight-bold o light texto fino    font-italic cursiva  small letra muy peque;a
+        centrar texto text-center   text-uppercase texto en mayusculas lowercase minusculas
+        utilities bootstrap para saber mas utilidades -->
+        <p class="display-4 font-weight-ligth text-center">Esto es un texto</p>
+        <code>
+            <pre>
+                if($hola == 'mundo'){
+                    echo"hola mundo";
+                }
+            </pre>
+        </code>
+        <!--resaltar codigo o teclas rapidas <kbd></kbd>-->
+        <kbd>control+s guardar</kbd>
+
+    </div>
+  
+    <!--escribir codigo de programacion
+     <code></code> con <pre></pre>-->
+     
+
+    <script type="text/javascript" src="jquery/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

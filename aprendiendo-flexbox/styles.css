@@ -1,0 +1,132 @@
+body{
+    /*variables en*/
+    --rojo:red;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#layout{
+    /*flexbox se aliniar sin float*/
+    display: flex;
+
+    /*adaptar alas cajas y su tama;o*/
+    /*display: inline-flex;*/
+
+    /*direccion de flexbox en fila*/
+    /*flex-direction: row;*/
+
+    /*direccion de flexbox en columna*/
+    /*flex-direction: column;*/
+
+
+    /*comportamiento original*/
+    /*flex-wrap: nowrap;*/
+
+    /*que no se salgan de la caja y vallan abajo*/
+    /*flex-wrap: wrap;*/
+
+    
+    /*escribir dos comandos en uno que uno se ponga lado de cada uno y abajo*/
+    flex-flow: row wrap;
+
+    /*flex-direction: row-reverse ;/*es poner los lementos ala izquierda y al reves*/
+    /*flex-direction: /*pone los elementos en columnas pero al reves*/
+    /*flex-direction: unset;/*no usar nada*/
+
+    /*dejar el contenido como esta izquierda*/
+    /*justify-content: flex-start;*/
+
+    /*se va el contenido ala derecha*/
+    /*justify-content: flex-end;*/
+
+    /*centrar el contenido*/
+    /*justify-content: center;*/
+
+    /*izquiersa y derecha*/
+    /*justify-content: left;
+    justify-content: right;*/
+
+    /*separar y poner espacio al contenido*/
+    /*justify-content: space-around;*/
+
+    /*separa los elementos con un espacio pero el primero y elultimo lo pega
+    al principio y al final*/
+    /*justify-content: space-between;*/
+
+    /*quede separado por espacios pero mas comprimido al centro*/
+    justify-content: space-evenly;
+
+    /*dejar el tamaño original de las cajas*/
+    /*align-items: baseline;*/
+
+    /*poner en el centro dela caja*/
+    /*align-items: center;*/
+
+    /*sepoene en la parte inferiror de la caja*/
+    /*align-items: flex-end;*/
+
+    /*sepone en la parte superior de la caja*/
+    align-items: flex-start;
+
+    height: 600px;
+
+    border: 3px solid black;
+    padding: 5px;
+}
+
+.caja{
+    
+
+    /*cuanto de minimo tendran las cajas*/
+    /*flex-basis: 25%;*/
+
+    /*hace que se ocupe todo el espacio o mas de la caja tanbien se pueden poner a elementos separados*/
+    flex-grow: 1;
+
+     /*hacer que disminuya caja*/
+    /*flex-shrink: 0;*/
+
+     /*minimo de caja con un calculo*/
+     /*flex-basis: calc((100% / 3) - 68px);*/
+
+
+
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    border: 4px solid #222;
+    margin: 10px;
+    background: gray;
+}
+
+/*ordenar elementos como tu quieras order: -1;*/
+.red{
+   /*hace q ocupe el 100%*/
+    /*flex-basis: 100%; */
+    
+/*order: 4;*/
+
+/*tanbien se pude poner en cajas por separado*/
+align-self: flex-start;
+
+
+    background: var(--rojo);
+}
+.green{
+  /*  order: 2;*/
+   align-self: center;
+    background: green;
+}
+.blue{
+/*order es ordenar como tu quieras*/
+    /*order: -1;*/
+    align-self: center;
+    background: blue;
+}
+.orange{
+    /*order: 3;*/
+    align-self:flex-end;
+    background: orange;
+}

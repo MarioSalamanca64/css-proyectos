@@ -1,0 +1,160 @@
+/*Instalas sass instalar nodejs y en CDM npm install -g sass*/
+
+
+/*copilar entrar en la carpeta CD 
+dir que tenemos adentro
+copilar sass --watch estilos.scss/ENTRADA styles.css/SALIDA
+*/
+
+//Variables
+$fuentes-tipica: sans-serif, Helvetica,Arial;
+$color-fondo:#ccc;
+$color-letra: red;
+$color-secundario: rgb(122,20,20);
+
+//Uso de variables
+body{
+    background-color:$color-fondo;
+}
+
+h1{
+    color: $color-letra;
+    font-family: $fuentes-tipica;
+}
+
+p{
+    color: $color-secundario;
+}
+
+//Anidacion
+.caja{
+    border: 1px solid black;
+    width:500px;
+    margin:0px auto;
+    text-align: center;
+    background-color: white;
+    padding: 10px;
+    h1{
+        color: blue;
+    }
+    P{
+        color: green;
+    }
+    .info{
+        font-size: 10px;
+
+        .author{
+            font-size: 15px;
+            color: orange;
+        }
+    }
+}
+
+
+//mixin -- funciones
+//normal
+/*@mixin crearBordes(){
+    border:5px solid red;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px black;
+}*/
+//Con parametros
+@mixin crearBordes($color,$size,$shadow){
+    border:$size solid $color;
+    border-radius: $size;
+    box-shadow: 0px 0px $size $shadow;
+}
+
+
+.caja{
+    @include crearBordes(red,10px,black);
+}
+
+.listado{
+    @include crearBordes(green,5px,yellow);
+}
+
+//Herencia
+%alert-normal { 
+    border: 1px solid gray;
+    background: white;
+    color:black;
+    padding: 10px;
+    width: 80%;
+    margin: 0px auto;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.alert{
+    @extend %alert-normal;
+}
+
+.alert-danger{
+    @extend %alert-normal;
+    color: red;
+    border-color: red;
+}
+
+.alert-success{
+    @extend %alert-normal;
+    color: green;
+    border-color: green;
+}
+
+/*operadores*/
+.clearfix{
+    clear: both;   
+}
+h1{
+    font-size: 20px + 5px - 1px;
+}
+
+$caja: 200px;
+$wrap: 900px;
+.cajas{
+    width: $wrap;
+    margin: 0px auto;
+}
+.caja{
+    float:left;
+    width: $caja / $wrap * 100%;
+    margin: 10px;
+}
+
+//Condicionales -IF
+$color-fondo: orange;
+/*/
+h1{
+@if $color-fondo == #ccc{
+    color: black;
+}@else{
+    color: lightsalmon;
+}
+}
+*/
+
+h1{
+    @if $color-fondo == #ccc{
+        color: black;
+    }@else if $color-fondo == black{
+        color: lightsalmon;
+    }@else{
+        color: pink;      
+    }
+    }
+    
+
+//FOR
+$contador: 1;
+@for $contador from 1 through/*asta*/ 10{
+    .listado/*variable*/ ul li:nth-child(#{$contador}){
+        font-size:$contador * 2px;
+    }
+
+}
+
+
+//EACH
+
+//WHILESS

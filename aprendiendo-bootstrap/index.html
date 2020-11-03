@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <!--importante para el responsive-->
+    <meta name="viewport" content="width=divece-width, user-scalable=no"/>
+    <title>Codigo en Bootstrap con Mario salamanca</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+    <!---como crear paddin margen interno 48px // w-width tama;o de caja 75% // margin 0px auto para centrar 
+        //y tanbien un borde rojo=danger
+    -->
+    <!---
+        <div class="mi-web w-75 m-auto p-5  border border-danger">
+        <h1>Codigo en Bootstrap con Mario salamanca</h1>
+        <h2>Bienvenido al codigo de bootstrap</h2>
+        Como crear un boton-->
+    <!-- <button class="btn btn-success">Hola soy un boton</button>
+    </div>-->
+    <!---fluid hace que sea reponsiv quedaria como container-fluid o sin fluid container-->
+    <div class="container-fluid border">
+        <!--definir una fila-->
+        <div class="row">
+            <!--ocupara el 100 de ancho en la pantalla col-12 
+            //y color azul bg- //texto blanco //pading 8px pr pading-right pl padding-left-->
+            <header id="header" class="col-12 bg-primary text-white pl-5">
+                <h1>Codigo en Bootstrap con Mario salamanca</h1>
+            </header>
+               <!--esconder menu de pendedio del tama;o d-sm-none quitar d-md-block mostrar d-none es xs--->
+            <nav id="menu" class="col-6 bg-secondary text-white d-none d-sm-none d-md-block">
+                <ul>
+                    <li>Inicio</li>
+                    <li>Pagina 1</li>
+                    <li>Pagina 2</li>
+                    <li>Pagina 3</li>
+                    <li>Contacto</li>
+                </ul>
+            </nav>
+         
+            <nav id="menu2" class="col-6 bg-secondary text-white d-none d-none d-sm-block d-md-block">
+                <ul class="row w-30">
+                    <!--responsive col-ms-12 540px-->
+                    <li class="col-xs-12 col-ms-12 col-md">Inicio</li>
+                    <li class="col-xs-12 col-ms-12 col-md">Pagina 1</li>
+                    <li class="col-xs-12 col-ms-12 col-md">Pagina 2</li>
+                    <li class="col-xs-12 col-ms-12 col-md">Pagina 3</li>
+                    <li class="col-xs-12 col-ms-12 col-md">Contacto</li>
+                </ul>
+            </nav>
+            <!--- col columnas col-12 es el maximo de espacio de la caja  
+                y row filas-->
+            <section id="content" class="col-12">
+                <div class="row">
+                    <section id="products" class="col-12  col-sm-12 col-md-9 border ">
+                        <h2>Productos</h2>
+                        <hr>
+                        <!--row tan bien sirve para porner un elemento alado de otro
+                    // m-2 es para separar los contenedores margin-->
+                        <div class="items">
+                            <!--responsive  col-mg- col-sm- grid tama;os en pagina de bootstrap-->
+                            <div class="row">
+                                <div class="item col col-lg col-md-12 col-sm-6 bg-primary ">
+                                    producto
+                                </div>
+                                <div class="item col col-lg col-md-6 col-sm-6 bg-warning ">
+                                    producto
+                                </div>
+                                <div class="item col col-lg col-md-6 col-sm-12 bg-success ">
+                                    producto
+                                </div> 
+                            </div>
+
+                            <div class="row">
+                                <div class="item col-3 bg-primary m-2">
+                                    producto
+                                </div>
+                                <div class="item col-3 bg-warning m-2">
+                                    producto
+                                </div>
+                                <div class="item col-3 bg-success m-2">
+                                    producto
+                                </div>
+                                <div class="item col-4 bg-primary m-2">
+                                    producto
+                                </div>
+                                <div class="item col-3 bg-warning m-2">
+                                    producto
+                                </div>
+                                <div class="item col-3 bg-success m-2">
+                                    producto
+                                </div>
+                            </div>
+                            <!--quedan mejor distribuidas con el col solo y compraten con mas espacios
+                            si quieres filas independientes tienes que seprar cada una con un row-->
+                            <div class="row">
+                                <div class="item col bg-primary m-2">
+                                    producto
+                                </div>
+                                <div class="item col bg-warning m-2">
+                                    producto
+                                </div>
+                                <div class="item col bg-success m-2">
+                                    producto
+                                </div>
+                            </div>
+                            <!--margin top seria mt-1 mt-5maximo//margin-bottom seria mb-1 mb-5max-->
+                            <div class="row mt-5 mb-5">
+                                <div class="item col bg-primary m-2">
+                                    producto
+                                </div>
+                                <div class="item col bg-warning m-2">
+                                    producto
+                                </div>
+                                <div class="item col bg-success m-2">
+                                    producto
+                                </div>
+                                <div class="item col-5 bg-danger m-2">
+                                    producto
+                                </div>
+                            </div>
+                            <!--offset sepracion de cajas-->
+                            <div class="row">
+                                <div class="item col-2 bg-primary offset-1">
+                                    producto
+                                </div>
+                                <div class="item col-2 bg-warning offset-1">
+                                    producto
+                                </div>
+                                <div class="item col-2 bg-success offset-1">
+                                    producto
+                                </div>
+                                <div class="item col-2 bg-danger offset-1">
+                                    producto
+                                </div>
+                            </div>
+                            <!--aliniar filas //justify start center end//
+                            centrado y con espacios en medio araund 
+                            poner ceparacion uno de un extremo del otro between
+                            -->
+                            <div class="row mt-1 justify-content-between">
+                                <div class="item col-3 bg-primary m-2">
+                                    producto
+                                </div>
+                                <div class="item col-3 bg-warning m-2">
+                                    producto
+                                </div>
+
+                                
+                               
+
+                            </div>
+                        </div>
+                    </section>
+                    <aside class="col-3 border d-none d-none d-sm-block d-md-block">
+                        <h2>Barra lateral</h2>
+                        <!--bg = backgraund h = height = altura 25=25% 
+                        lateral es la clase despues sige boostrap
+                        aling-items-start alinar verticalmente los elementos
+                        ordenar los elementos con quieras // order-numero --->
+                        <div class="lateral row bg-light align-items-center">
+                            <div class="col-4 bg-primary align-self-start order-3">
+                                Elemento1
+                            </div>
+                            <div class="col-4 bg-success align-self-center order-2">
+                                Elemento1
+                            </div>
+                            <div class="col-4 bg-warning align-self-end order-1">
+                                Elemento1
+                            </div>
+
+                        </div>
+                    </aside>
+                </div>
+
+            </section>
+            <footer class="col-lg-12 bg-info">
+                Maquetacion en CSS con Mario Salamanca &copy;
+            </footer>
+        </div>
+    </div>
+
+
+
+
+
+    <script type="text/javascript" src="jquery/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,22 +1,4 @@
-
-/*copilar entrar en la carpeta CD 
-dir que tenemos adentro
-copilar sass --watch estilos.scss/ENTRADA styles.css/SALIDA
-*/
-$fuentes-tipica: sans-serif, Helvetica,Arial;
-$color-fondo:#ccc;
-$color-letra: red;
-$color-secundario: rgb(122,20,20);
-
-body{
-    background-color:$color-fondo;
-}
-
-h1{
-    color: $color-letra;
-    font-family: $fuentes-tipica;
-}
-
-p{
-    color: $color-secundario;
-}
+//enlazar otros archivos
+//Modulos
+@use 'base';
+@use 'encabezado';

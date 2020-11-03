@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <!--importante para el responsive-->
+    <meta name="viewport" content="width=divece-width, user-scalable=no" />
+    <title>Componentes de Bootstrap 4 Mario Salamanca</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <header class="col-md-12 mt-2">
+
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+                    <a class="navbar-brand" href="#">Componentes</a>
+
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Dropdown
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#">Disabled</a>
+                            </li>
+                            <li class="nav-item">
+                                <form class="form-inline mx-2 my-2 my-lg-0">
+                                    <input class="form-control mr-sm-2" type="search" placeholder="Search"
+                                        aria-label="Search">
+                                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                                </form>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Mario Salamanca
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+                </nav>
+            </header>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-8 mt-3">
+                <!--aria label es una referecia a que tiene o que contiene-->
+                <nav aria-label="breadcrumb">
+                    <!--menu en la pagina-->
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="#">Inicio</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="#">Desarrollo web</a>
+                        </li>
+                        <li class="breadcrumb-item"><a href="#">Componentes de bootstrap</a>
+                        </li>
+                    </ol>
+                </nav>
+
+                <!--Inicio slider galeria de fotos en pagina de bootstrap son carousel-->
+
+                <div id="slider" class="carousel slide mb-3" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#slider" data-slide-to="0" class="active"></li>
+                        <li data-target="#slider" data-slide-to="1"></li>
+                        <li data-target="#slider" data-slide-to="2"></li>
+                    </ol>
+
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active">
+                            <img class="d-block w-100"
+                                src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.ifam.es%2Fwp-content%2Fuploads%2F2015%2F08%2Fimagenes-de-paisajes-hermosos-4.jpg&f=1&nofb=1">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Mi primera imagen</h5>
+                                <p>Practica con slider</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100"
+                                src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2F9JkM9zdLU38%2Fmaxresdefault.jpg&f=1&nofb=1">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100"
+                                src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimagenesdepaisajes.net%2Fwp-content%2Fuploads%2F2016%2F07%2Fimagenes-naturales-en-hd.jpg&f=1&nofb=1">
+                        </div>
+
+                    </div>
+                    <!--poner un control para el carousel este es antes prev-->
+                    <a class="carousel-control-prev" href="#slider" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                        <span class="sr-only">Anterior</span>
+                    </a>
+                    <!--poner un control para el carousel este es despues next-->
+                    <a class="carousel-control-next" href="#slider" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                        <span class="sr-only">Siguiente</span>
+                    </a>
+                </div>
+                <!--Final slider galeria de fotos-->
+                <div>
+                    <!--Como hacer alertas-->
+                    <!--cerrar alertas suabemente alert-dismissible fade show -->
+                    <div class="alert alert-success alert-dismissible fade show ">
+                        Te has resgistrado <strong>correctamente</strong>
+                        <!--poner una x para quietar la etiqueta-->
+                        <button type="button" class="close" data-dismiss="alert">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <!--hacer badgets hacer que el objeto tenga mas atencion-->
+                    <h2>
+                        <span class="badge badge-success">
+                            Nuevo
+                        </span>
+                        Componentes de bootstrap
+                    </h2>
+                    <p>
+                        <a href="#" class="badge badge-warning badge-pill">
+                            Articulo nuevo
+                        </a>
+                    </p>
+
+                </div>
+            </div>
+            <!--lateral jumbotron alerta  display tama;o de letra 
+                 tama;os de btn caja lg grande lx chica-->
+            <div class="col-md-4">
+                <div class="jumbotron my-3">
+                    <h1 class="diplay-6">Bienvenido a mi web</h1>
+                    <p class="lead">Esto es un jumbotron en bootstrap</p>
+                    <hr class="my-2" />
+                    <p>Identificate en la web</p>
+                    <a href="#" class="btn btn-primary btn-lg">Login</a>
+                </div>
+
+
+
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary mt-2" data-toggle="modal" data-target="#exampleModal">
+                    Sacar ventana
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Estas seguro de ver esta ventana?</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                Una vez cerrada pordras abrir nueva mente
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-primary">Guardar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--collapse -->
+                <a class="btn btn-success mt-2" data-toggle="collapse" href="#informacion" role="button">
+                    Mostrar datos
+                </a>
+                <div class="collapse" id="informacion">
+                    <div class="card card-body bg-dark text-white mt-2">
+                        Esta es la informacion oculta
+                    </div>
+                </div>
+
+                <!--Barra de progreso-->
+                <div class="progress mt-5">
+                    <div id="barra-progreso" class="progress-bar bg-success" role="progressbar">0%</div>
+                </div>
+                <!--javascript-->
+                <script>
+                    var contador = 0;
+
+                    setInterval(function () {
+                        if (contador < 100) {
+                            contador++;
+                            var barra = document.querySelector("#barra-progreso");
+                            barra.style.width = contador + '%';
+                            barra.innerHTML = contador + '%';
+                        }
+                    }, 500);
+                </script>
+
+                <!--Tooltips al pasar el cursor da informacion-->
+                <button type="button" class="btn-tool btn btn-danger mt-3" data-toggle="tooltip" data-placement="bottom"
+                    title="Si das click sacaras una alerta">Alerta 1</button>
+                <button type="button" class="btn-tool btn btn-info mt-3" data-toggle="tooltip" data-placement="right"
+                    title="Si das click sacaras una alerta">Alerta 2</button>
+                <!--popovers-->
+                <button type="button" class="btn-pop btn btn-warning mt-3" data-container="body" data-toggle="popover"
+                    data-placement="top" data-content="esto es un popover" title="Hola">Alerta 3</button>
+
+                <!--Formulario-->
+                <hr>
+                <h3>Formulario</h3>
+                <form>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-preprend">
+                                <!--rounded-0 es para que no este redondeado-->
+                                <span class="input-group-text rounded-0">Nombre</span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Mete el Nombre">
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label>Genero</label>
+                        <select class="form-control">
+                            <option>Hombre</option>
+                            <option>Mujer</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Email</label>
+                        <input type="text" class="form-control" placeholder="Mete el Email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Contraseña</label>
+                        <input type="password" class="form-control" placeholder="Mete la Contraseña">
+                    </div>
+                    <input type="submit" class="btn btn-success" value="Enviar"></button>
+                </form>
+            </div>
+        </div>
+
+
+
+        <!--Como hacer targetas-->
+        <div class="row col-md-8">
+
+            <!--quietar el pading y cupe toda la targeta p-0-->
+            <div class="card col p-0 mr-2">
+                <img class="card-img-top img-fluid" src="https://via.placeholder.com/300x200">
+                <div class="card-body">
+                    <h3 class="card-title">Trageta 1</h3>
+                    <p class="card-text">
+                        Hola, entra en este articulo y aprende bootstrap
+                    </p>
+                    <a href="#" class="btn btn-info">Entrar</a>
+                </div>
+            </div>
+            <div class="card col p-0 mr-2">
+                <img class="card-img-top img-fluid" src="https://via.placeholder.com/300x200">
+                <div class="card-body">
+                    <h3 class="card-title">Trageta 2</h3>
+                    <p class="card-text">
+                        Hola, entra en este articulo y aprende bootstrap
+                    </p>
+                    <a href="#" class="btn btn-success">Entrar</a>
+                </div>
+            </div>
+            <div class="card col p-0 mr-2">
+                <img class="card-img-top img-fluid" src="https://via.placeholder.com/300x200">
+                <div class="card-body">
+                    <h3 class="card-title">Trageta 3</h3>
+                    <p class="card-text">
+                        Hola, entra en este articulo y aprende bootstrap
+                    </p>
+                    <!--como hacer un boton de entrar btn-->
+                    <a href="#" class="btn btn-warning">Entrar</a>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+
+        </div>
+        <div class="row">
+
+
+            <!--una paginacion-->
+            <nav aria-label="pagination" class="m-3">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" href="#">
+                            &laquo;
+                        </a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">
+                            1
+                        </a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">
+                            2
+                        </a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">
+                            3
+                        </a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">
+                            4
+                        </a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">
+                            &raquo;
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!--tablas my-5 maximo margen de todos los lados table-striped = pinta una o otra no-->
+        <table class="table table-bordered table-hover my-5">
+            <!--dark while liht colores de tablas hay mas colores-->
+            <thead class="thead-dark">
+                <tr>
+                    <th>
+                        Nombre 
+                    </th>
+                    <th>
+                        Apellidos
+                    </th>
+                    <th>
+                        Edad
+                    </th>
+                </tr>
+            </thead>
+            
+            <tr>
+                <td>
+                    Juan
+                </td>
+                <td>
+                    Lopez
+                </td>
+                <td>
+                    40
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    Pedro
+                </td>
+                <td>
+                    Quesada
+                </td>
+                <td>
+                    35
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    Javier
+                </td>
+                <td>
+                    Lopez
+                </td>
+                <td>
+                    25
+                </td>
+
+            </tr>
+        </table>
+    </div>
+    
+
+
+    <script type="text/javascript" src="jquery/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="jquery/popper.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <!--para hacer el cambio de imagenes o carousel 3000=3segundos-->
+    <script>
+        $(document).ready(function () {
+            $(".carousel").carousel({
+                interval: 3000
+            });
+            /*tooltips*/
+            $(".btn-tool").tooltip();
+            /*popovers*/
+            $(".btn-pop").popover();
+
+        });
+    </script>
+</body>
+
+</html>
